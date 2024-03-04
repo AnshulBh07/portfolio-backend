@@ -44,7 +44,7 @@ app.post("/contact", async (req: Request, res: Response) => {
   try {
     await SENDMAIL(options);
     console.log("Email sent successfully");
-    res.send("ok").status(200);
+    res.send("ok, email sent successfully!").status(200);
   } catch {
     res.send("failed").status(500);
   }
